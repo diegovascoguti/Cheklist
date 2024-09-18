@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Automatización CRM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .logo-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .logo-container img {
+            max-width: 150px;
+            height: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .check-cell {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo Empresa">
+        </div>
+
+        <!-- Sección de Configuración del CRM -->
+        <h2 class="text-center">Configuración del CRM</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Caso de Prueba</th>
+                    <th>Descripción</th>
+                    <th>Resultado Esperado</th>
+                    <th>Aceptado</th>
+                    <th>No Aceptado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Configuración del CRM</td>
+                    <td>Verificar que el CRM esté correctamente configurado con todos los módulos internos (Leads, Oportunidades, etc.).</td>
+                    <td>El CRM permite gestionar leads, oportunidades, y se puede visualizar la vista Kanban correctamente, incluyendo el ciclo de ventas y las fases configuradas.</td>
+                    <td class="check-cell"><input type="checkbox" id="check1-accepted"></td>
+                    <td class="check-cell"><input type="checkbox" id="check1-rejected"></td>
+                </tr>
+                <tr>
+                    <td>Integración de Módulo VoIP</td>
+                    <td>Verificar la integración del módulo VoIP con el CRM para la gestión de llamadas.</td>
+                    <td>El sistema registra llamadas entrantes y salientes, asociando automáticamente las interacciones con las oportunidades correspondientes en el CRM.</td>
+                    <td class="check-cell"><input type="checkbox" id="check2-accepted"></td>
+                    <td class="check-cell"><input type="checkbox" id="check2-rejected"></td>
+                </tr>
+                <tr>
+                    <td>Integración de WhatsApp</td>
+                    <td>Verificar la integración de WhatsApp para notificaciones automáticas.</td>
+                    <td>Los mensajes se envían automáticamente desde el CRM a través de WhatsApp para los eventos configurados (bienvenida, cambio de estado de oportunidad, etc.).</td>
+                    <td class="check-cell"><input type="checkbox" id="check3-accepted"></td>
+                    <td class="check-cell"><input type="checkbox" id="check3-rejected"></td>
+                </tr>
+                <tr>
+                    <td>Integración de Marketing por Correo</td>
+                    <td>Verificar la integración del módulo de correo con el CRM para el envío de campañas y correos automáticos.</td>
+                    <td>El módulo de correo envía correos automáticos en fechas clave o basados en cambios de estado de las oportunidades, y sincroniza el historial en el CRM.</td>
+                    <td class="check-cell"><input type="checkbox" id="check4-accepted"></td>
+                    <td class="check-cell"><input type="checkbox" id="check4-rejected"></td>
+                </tr>
+                <tr>
+                    <td>Integración de Marketing por SMS</td>
+                    <td>Verificar la integración de SMS para notificaciones automáticas.</td>
+                    <td>El sistema envía SMS de recordatorios de reuniones, cambios de estado, y ofertas expiradas desde el CRM, registrando la interacción en el historial de la oportunidad.</td>
+                    <td class="check-cell"><input type="checkbox" id="check5-accepted"></td>
+                    <td class="check-cell"><input type="checkbox" id="check5-rejected"></td>
+                </tr>
+                <tr>
+                    <td>Tableros y KPIs en CRM</td>
+                    <td>Verificar que los tableros y KPIs de ventas están correctamente configurados para monitorear el rendimiento.</td>
+                    <td>El gerente comercial puede visualizar los KPIs de oportunidades cerradas, pendientes, y la carga de trabajo del equipo en los tableros del CRM.</td>
+                    <td class="check-cell"><input type="checkbox" id="check6-accepted"></td>
+                    <td class="check-cell"><input type="checkbox" id="check6-rejected"></td>
+                </tr>
+                <tr>
+                    <td>Sincronización con Calendario/Citas</td>
+                    <td>Verificar la correcta sincronización del calendario con las reuniones y llamadas programadas en el CRM.</td>
+                    <td>Las reuniones y llamadas se sincronizan con el calendario del CRM, mostrando recordatorios y actualizando el estado de la oportunidad según se realicen las interacciones.</td>
+                    <td class="check-cell"><input type="checkbox" id="check7-accepted"></td>
+                    <td class="check-cell"><input type="checkbox" id="check7-rejected"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Sección de Automatizaciones -->
+        <h2 class="text-center">Automatizaciones</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Caso de Prueba</th>
+                    <th>Descripción</th>
+                    <th>Resultado Esperado</th>
+                    <th>Aceptado</th>
+                    <th>No Aceptado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Automatización de actualización de estado en Kanban</td>
+                    <td>Cuando una oportunidad cambia de estado, activar tareas, enviar correos de seguimiento o activar recordatorios automáticos.</td>
+                    <td>El CRM debe generar tareas, correos y recordatorios automáticos al cambiar el estado en Kanban.</td>
+                    <td class="check-cell"><input type="checkbox" id="check8-accepted"></td>
+                    <td class="check-cell"><input type="checkbox" id="check8-rejected"></td>
+                </tr>
+                <tr>
+                    <td>Generación automática de actividades</td>
+                    <td>Al crear una nueva oportunidad, asignar automáticamente actividades de seguimiento, reuniones o llamadas.</td>
+                    <td>El CRM debe generar actividades automáticamente en función del estado de la oportunidad.</td>
+                    <td class="check-cell"><input type="checkbox" id="check9-accepted"></td>
+                    <td class="check-cell"><input type="checkbox" id="check9-rejected"></td>
+                </tr>
+                <tr>
+                    <td>Automatización de envío de correos electrónicos</td>
+                    <td>Sincronización con el módulo de correo para enviar automáticamente mensajes en fechas clave del ciclo de ventas.</td>
+                    <td>El sistema debe enviar correos automáticos y registrar las interacciones en el CRM.</td>
+                    <td class="check-cell"><input type="checkbox" id="check10-accepted"></td>
+                    <td class="check-cell"><input type="checkbox" id="check10-rejected"></td>
+                </tr>
+                <tr>
+                    <td>Notificaciones automáticas al equipo</td>
+                    <td>Al cambiar el estado de la oportunidad o al alcanzar hitos importantes, notificar al equipo y al gerente.</td>
+                    <td>El equipo debe recibir notificaciones automáticas por hitos clave en las oportunidades.</td>
+                    <td class="check-cell"><input type="checkbox" id="check11-accepted"></td>
+                    <td class="check-cell"><input type="checkbox" id="check11-rejected"></td>
+                </tr>
+                <tr>
+                    <td>Activación de campañas de WhatsApp y SMS</td>
+                    <td>Enviar mensajes a través de WhatsApp o SMS en etapas definidas de la oportunidad o en respuesta a interacciones del cliente.</td>
+                    <td>Los clientes deben recibir mensajes automáticos de seguimiento en WhatsApp o SMS según las reglas definidas.</td>
+                    <td class="check-cell"><input type="checkbox" id="check12-accepted"></td>
+                    <td class="check-cell"><input type="checkbox" id="check12-rejected"></td>
+                </tr>
+                <tr>
+                    <td>Generación automática de reportes de previsión</td>
+                    <td>Crear y enviar informes semanales o mensuales con la previsión de ventas a los gerentes de área.</td>
+                    <td>El CRM debe generar reportes automáticos de previsión de ventas y enviarlos al equipo de gestión.</td>
+                    <td class="check-cell"><input type="checkbox" id="check13-accepted"></td>
+                    <td class="check-cell"><input type="checkbox" id="check13-rejected"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Botones para guardar y resetear la selección -->
+        <div class="text-center">
+            <button class="btn btn-primary" onclick="saveSelections()">Guardar Selección</button>
+            <button class="btn btn-danger" onclick="resetSelections()">Resetear Selección</button>
+        </div>
+    </div>
+
+    <script>
+        // Cargar selecciones desde localStorage al cargar la página
+        window.onload = function() {
+            for (let i = 1; i <= 13; i++) {
+                document.getElementById(`check${i}-accepted`).checked = localStorage.getItem(`check${i}-accepted`) === 'true';
+                document.getElementById(`check${i}-rejected`).checked = localStorage.getItem(`check${i}-rejected`) === 'true';
+            }
+        };
+
+        // Guardar las selecciones en localStorage
+        function saveSelections() {
+            for (let i = 1; i <= 13; i++) {
+                localStorage.setItem(`check${i}-accepted`, document.getElementById(`check${i}-accepted`).checked);
+                localStorage.setItem(`check${i}-rejected`, document.getElementById(`check${i}-rejected`).checked);
+            }
+            alert('Selección guardada correctamente.');
+        }
+
+        // Resetear las selecciones
+        function resetSelections() {
+            for (let i = 1; i <= 13; i++) {
+                document.getElementById(`check${i}-accepted`).checked = false;
+                document.getElementById(`check${i}-rejected`).checked = false;
+                localStorage.removeItem(`check${i}-accepted`);
+                localStorage.removeItem(`check${i}-rejected`);
+            }
+            alert('Selección reseteada.');
+        }
+    </script>
+</body>
+</html>
